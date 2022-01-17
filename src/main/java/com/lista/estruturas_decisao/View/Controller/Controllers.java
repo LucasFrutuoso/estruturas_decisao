@@ -9,6 +9,10 @@ import com.lista.estruturas_decisao.Shared.Dto05;
 import com.lista.estruturas_decisao.Shared.Dto06;
 import com.lista.estruturas_decisao.Shared.Dto07;
 import com.lista.estruturas_decisao.Shared.Dto08;
+import com.lista.estruturas_decisao.Shared.Dto09;
+import com.lista.estruturas_decisao.Shared.Dto10;
+import com.lista.estruturas_decisao.Shared.Dto11;
+import com.lista.estruturas_decisao.Shared.Dto12;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -73,18 +77,52 @@ public class Controllers {
     }
 
     @PostMapping("/decrescente")
-    public ResponseEntity<?> ex07(@RequestBody Dto07 dto){
+    public ResponseEntity<?> ex07(@RequestBody Dto07 dto) {
         Dto07 Dto = service.ex07(dto);
 
         return ResponseEntity.ok().body(Dto);
     }
 
     @PostMapping("/turno")
-    public ResponseEntity<?> ex08(@RequestBody Dto08 dto){
+    public ResponseEntity<?> ex08(@RequestBody Dto08 dto) {
         Dto08 Dto = service.ex08(dto);
 
         return ResponseEntity.ok().body(Dto);
     }
 
+    @PostMapping("/salario")
+    public ResponseEntity<?> ex09(@RequestBody Dto09 dto) {
+
+        Dto09 Dto = service.ex09(dto);
+
+        return ResponseEntity.ok().body(Dto);
+    }
+
+    @PostMapping("/impostos")
+    public ResponseEntity<?> ex10(@RequestBody Dto10 dto) {
+        Dto10 Dto = service.ex10(dto);
+
+        return ResponseEntity.ok().body(Dto);
+    }
+
+    @PostMapping("/diaSemana")
+    public ResponseEntity<?> ex11(@RequestBody Dto11 dto) {
+
+        Dto11 Dto = service.ex11(dto);
+
+        return ResponseEntity.ok().body(Dto);
+
+    }
+
+    @PostMapping("/notas")
+    public ResponseEntity<?> ex12(@RequestBody Dto12 dto) {
+
+        Dto12 Dto = service.ex12(dto);
+
+        return ResponseEntity.ok().body(Dto);
+
+    }
+
+   
 
 }
